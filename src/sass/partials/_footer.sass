@@ -1,0 +1,101 @@
+.footer
+  text-align: center
+  background: url('../img/bg7.png') 50% 100% no-repeat
+  background-size: contain
+  +rmin(1920)
+    background-size: initial
+  +r(767)
+    background: none
+  &__inner
+    position: relative
+    padding: 85px 0 80px
+    +r(1200)
+      padding: 60px 0 30px
+    +r(767)
+      padding-bottom: 0
+  &__button
+    padding-bottom: 55px
+    &--last
+      +r(1200)
+        padding-bottom: 10px
+      +r(767)
+        padding-bottom: 55px
+  &__title
+    margin-bottom: 27px
+    font-size: 48px
+    +poppins-semibold
+    color: #353846
+    +r(1440)
+      font-size: 35px
+    +r(1200)
+      font-size: 30px
+    +r(767)
+      font-size: 25px
+  &__desc
+    font-size: 14px
+    line-height: 2.1
+  &__solutions
+    display: flex
+    justify-content: space-around
+    max-width: 960px
+    margin: 45px auto 50px
+    font-size: 18px
+    line-height: 2
+    color: #353846
+    +r(767)
+      flex-wrap: wrap
+      font-size: 16px
+  &__list
+    margin: 0 30px 20px
+  &__copy
+    display: flex
+    justify-content: center
+    padding-top: 120px
+    font-size: 12px
+    color: #fff
+    +r(767)
+      flex-wrap: wrap
+      margin: 0 -15px
+      padding: 50px 15px 25px
+      background: #353846
+  &__copy-option
+    margin: 0 35px
+    +r(1200)
+      margin: 0 20px 20px
+    &:first-child
+      margin-left: 0
+      margin-right: 65px
+      +r(1200)
+        margin-right: 40px
+      +r(767)
+        margin: 0 20px 20px
+    &:last-child
+      margin-left: 10px
+      margin-right: 0
+  &__link
+    text-decoration: none
+    color: #fff
+    &:hover
+      text-decoration: underline
+  &__img
+    position: absolute
+    &--right
+      right: -40px
+      bottom: 185px
+      +r(1650)
+        max-height: 360px
+      +r(1440)
+        right: 35px
+        bottom: 150px
+      +r(1200)
+        display: none
+    &--left
+      right: 100%
+      bottom: 65px
+      margin-right: -250px
+      +r(1650)
+        bottom: 160px
+        max-width: 350px
+        margin-right: -280px
+      +r(1440)
+        display: none
