@@ -29,52 +29,6 @@ title: Redtrack
 			<h2 class="heading__title">How do our prices compare <br> with Voluum?</h2>
 		</div>
 	</div>
-
-	{% set dataTableMonthly = [{
-		plan: 'monthly limits on active campaigns',
-		redtrack: 'unlimited',
-		voluum: 'limited'
-	},
-	{
-		plan: 'method of counting events',
-		redtrack: 'clicks',
-		voluum: 'visits, clicks, conversions'
-	},
-	{
-		plan: 'up to 1,000,000 events',
-		redtrack: '$49/mo',
-		voluum: '$69/mo',
-		redtrackBold: true
-	},
-	{
-		plan: 'up to 3,000,000 events',
-		redtrack: '$99/mo',
-		voluum: '$149/mo',
-		redtrackBold: true
-	},
-	{
-		plan: 'up to 10,000,000 events',
-		redtrack: '$399/mo',
-		voluum: '$449/mo',
-		redtrackBold: true
-	}] %}
-
-
-	{% set dataTableYearly = [{
-		plan: 'up to 1,000,000 events',
-		redtrack: '$490 per year',
-		voluum: '$588 per year'
-	},
-	{
-		plan: 'up to 3,000,000 events',
-		redtrack: '$990 per year',
-		voluum: '$1,428 per year'
-	},
-	{
-		plan: 'up to 10,000,000 events',
-		redtrack: '$3,990 per year',
-		voluum: '$4,188 per year'
-	}] %}
 	<section class="data data--main">
 		<div class="l-center">
 			<div class="data__inner">
@@ -85,6 +39,7 @@ title: Redtrack
 						<div class="table__cell">Redtrack</div>
 						<div class="table__cell">Voluum</div>
 					</div>
+					{% from 'partials/_data-main.html' import dataTableMonthly, dataTableYearly %}
 					{% for row in dataTableMonthly %}
 					<div class="table__row {% if loop.last %}table__row--last{% endif %}">
 						<div class="table__cell"><div class="table__max">{{ row.plan }}</div></div>
@@ -117,72 +72,6 @@ title: Redtrack
 			<h2 class="heading__title">Let's compare our features <br> with Voluum?</h2>
 		</div>
 	</div>
-	{% set dataTableTracking = [{
-		plan: 'monthly limits on active campaigns',
-		redtrack: 'unlimited',
-		voluum: 'limited'
-	},
-	{
-		plan: 'redirectless tracking',
-		redtrack: '+',
-		voluum: '+ (starts from $/month)'
-	},
-	{
-		plan: 'organic traffic tracking',
-		redtrack: '+',
-		voluum: '+'
-	},
-	{
-		plan: 'rule-based traffic distribution',
-		redtrack: '+',
-		voluum: '+*'
-	},
-	{
-		plan: 'auto-optimization',
-		redtrack: '+*',
-		voluum: '+*'
-	},
-	{
-		plan: 'multi-step funnels',
-		redtrack: '+',
-		voluum: '+*'
-	},
-	{
-		plan: 'LP protect',
-		redtrack: '+',
-		voluum: '+*'
-	},
-	{
-		plan: 'postback protect',
-		redtrack: '+',
-		voluum: '-'
-	},
-	{
-		plan: 'unique click tracking',
-		redtrack: '+',
-		voluum: '-'
-	},
-	{
-		plan: 'different modes of conversion attribution',
-		redtrack: '+',
-		voluum: '-'
-	},
-	{
-		plan: 'data storage',
-		redtrack: 'unlimited',
-		voluum: 'limited'
-	},
-	{
-		plan: 'click and conversion logs',
-		redtrack: '+',
-		voluum: '+*'
-	},
-	{
-		plan: 'real-time statistics',
-		redtrack: '+',
-		voluum: '+*'
-	}] %}
-
 	<section class="data data--tracking">
 		<div class="l-center">
 			<div class="data__inner">
@@ -192,6 +81,7 @@ title: Redtrack
 						<div class="table__cell">Redtrack</div>
 						<div class="table__cell">Voluum</div>
 					</div>
+					{% from 'partials/_data-tracking.html' import dataTableTracking %}
 					{% for row in dataTableTracking %}
 					<div class="table__row {% if loop.last %}table__row--last{% endif %}">
 						<div class="table__cell"><div class="table__max table__max--lg">{{ row.plan }}</div></div>
@@ -207,27 +97,6 @@ title: Redtrack
 			</div>
 		</div>
 	</section>
-	{% set dataTableToolkit = [{
-		plan: 'shared access',
-		redtrack: '+',
-		voluum: '+'
-	},
-	{
-		plan: 'white-label reporting portal',
-		redtrack: '+',
-		voluum: '-'
-	},
-	{
-		plan: 'affiliate tracking',
-		redtrack: '+',
-		voluum: '-'
-	},
-	{
-		plan: 'independent affiliate signup',
-		redtrack: '+',
-		voluum: '-'
-	}] %}
-
 	<section class="data data--toolkit">
 		<div class="l-center">
 			<div class="data__inner">
@@ -239,6 +108,7 @@ title: Redtrack
 							<div class="table__cell">Redtrack</div>
 							<div class="table__cell">Voluum</div>
 						</div>
+						{% from 'partials/_data-toolkit.html' import dataTableToolkit %}
 						{% for row in dataTableToolkit %}
 						<div class="table__row {% if loop.last %}table__row--last{% endif %}">
 							<div class="table__cell">{{ row.plan }}</div>
@@ -257,6 +127,66 @@ title: Redtrack
 	<div class="heading heading--bg-white">
 		<div class="l-center">
 			<h2 class="heading__title">What people say?</h2>
+		</div>
+	</div>
+	<div class="slider">
+		<div class="slider__bg"></div>
+		<div class="l-center">
+			<div class="slider__inner">
+				<div class="slider__nav"></div>
+				<div class="owl-carousel owl-theme">
+					<div class="slider__item">
+						<h3 class="slider__title">“Excellent company”</h3>
+						<hr class="slider__underline">
+						<div class="slider__text">
+							<p>Excellent company. I'm particularly happy with Redtrack.io because they invest the time to make sure that their solution works well for you. I use a somewhat unusual method of advertising, but the team spent several hours of their precious time to make sure their solution was fit for purpose.</p>
+							<p>Furthermore, the tracker does not seem to be plagued with difficulties that I have experienced with other trackers, namely a deluge of spam traffic that renders other tools functionally useless.</p>
+							<p>Redtrack blocks these spam bots at source, meaning you can focus on what you want : advertising and making money!</p>
+							<p>Highly recommended.</p>
+						</div>
+					</div>
+					<div class="slider__item">
+						<h3 class="slider__title">“Good tracker. Good price.”</h3>
+						<hr class="slider__underline">
+						<div class="slider__text">
+							<p>Functionality at the level of all cloud trackers.</p>
+							<p>You have full API access, which is very good. Fast redirects. And all for the lowest price on the market.</p>
+						</div>
+					</div>
+					<div class="slider__item">
+						<h3 class="slider__title">“Lorem ipsum”</h3>
+						<hr class="slider__underline">
+						<div class="slider__text">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, commodi?</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vero, fugiat sint, quaerat nostrum officiis adipisci consequuntur harum, vel ipsum quae! In fugiat maxime perspiciatis quae voluptate? Cupiditate rerum nulla aspernatur fuga incidunt? Hic ex qui iusto consequatur minima ratione, veritatis, perspiciatis maxime amet aliquam repudiandae voluptate quaerat aut eum.</p>
+						</div>
+					</div>
+					<div class="slider__item">
+						<h3 class="slider__title">“Lorem ipsum”</h3>
+						<hr class="slider__underline">
+						<div class="slider__text">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, commodi?</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vero, fugiat sint, quaerat nostrum officiis adipisci consequuntur harum, vel ipsum quae! In fugiat maxime perspiciatis quae voluptate? Cupiditate rerum nulla aspernatur fuga incidunt? Hic ex qui iusto consequatur minima ratione, veritatis, perspiciatis maxime amet aliquam repudiandae voluptate quaerat aut eum.</p>
+						</div>
+					</div>
+					<div class="slider__item">
+						<h3 class="slider__title">“Lorem ipsum”</h3>
+						<hr class="slider__underline">
+						<div class="slider__text">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, commodi?</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vero, fugiat sint, quaerat nostrum officiis adipisci consequuntur harum, vel ipsum quae! In fugiat maxime perspiciatis quae voluptate? Cupiditate rerum nulla aspernatur fuga incidunt? Hic ex qui iusto consequatur minima ratione, veritatis, perspiciatis maxime amet aliquam repudiandae voluptate quaerat aut eum.</p>
+						</div>
+					</div>
+					<div class="slider__item">
+						<h3 class="slider__title">“Lorem ipsum”</h3>
+						<hr class="slider__underline">
+						<div class="slider__text">
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, commodi?</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vero, fugiat sint, quaerat nostrum officiis adipisci consequuntur harum, vel ipsum quae! In fugiat maxime perspiciatis quae voluptate? Cupiditate rerum nulla aspernatur fuga incidunt? Hic ex qui iusto consequatur minima ratione, veritatis, perspiciatis maxime amet aliquam repudiandae voluptate quaerat aut eum.</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 {% endblock %}
