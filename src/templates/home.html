@@ -75,7 +75,7 @@ title: Redtrack
 		redtrack: '$3,990 per year',
 		voluum: '$4,188 per year'
 	}] %}
-	<section class="data">
+	<section class="data data--main">
 		<div class="l-center">
 			<div class="data__inner">
 				<img class="data__img" src="img/img2.png" alt="img">
@@ -112,9 +112,151 @@ title: Redtrack
 			</div>
 		</div>
 	</section>
-	<div class="heading heading--bg-white">
+	<div class="heading heading--bg-white heading--more-padding">
 		<div class="l-center">
 			<h2 class="heading__title">Let's compare our features <br> with Voluum?</h2>
+		</div>
+	</div>
+	{% set dataTableTracking = [{
+		plan: 'monthly limits on active campaigns',
+		redtrack: 'unlimited',
+		voluum: 'limited'
+	},
+	{
+		plan: 'redirectless tracking',
+		redtrack: '+',
+		voluum: '+ (starts from $/month)'
+	},
+	{
+		plan: 'organic traffic tracking',
+		redtrack: '+',
+		voluum: '+'
+	},
+	{
+		plan: 'rule-based traffic distribution',
+		redtrack: '+',
+		voluum: '+*'
+	},
+	{
+		plan: 'auto-optimization',
+		redtrack: '+*',
+		voluum: '+*'
+	},
+	{
+		plan: 'multi-step funnels',
+		redtrack: '+',
+		voluum: '+*'
+	},
+	{
+		plan: 'LP protect',
+		redtrack: '+',
+		voluum: '+*'
+	},
+	{
+		plan: 'postback protect',
+		redtrack: '+',
+		voluum: '-'
+	},
+	{
+		plan: 'unique click tracking',
+		redtrack: '+',
+		voluum: '-'
+	},
+	{
+		plan: 'different modes of conversion attribution',
+		redtrack: '+',
+		voluum: '-'
+	},
+	{
+		plan: 'data storage',
+		redtrack: 'unlimited',
+		voluum: 'limited'
+	},
+	{
+		plan: 'click and conversion logs',
+		redtrack: '+',
+		voluum: '+*'
+	},
+	{
+		plan: 'real-time statistics',
+		redtrack: '+',
+		voluum: '+*'
+	}] %}
+
+	<section class="data data--tracking">
+		<div class="l-center">
+			<div class="data__inner">
+				<div class="table">
+					<div class="table__row table__row--heading">
+						<div class="table__cell"><div class="table__max table__max--lg">Tracking & reporting features</div></div>
+						<div class="table__cell">Redtrack</div>
+						<div class="table__cell">Voluum</div>
+					</div>
+					{% for row in dataTableTracking %}
+					<div class="table__row {% if loop.last %}table__row--last{% endif %}">
+						<div class="table__cell"><div class="table__max table__max--lg">{{ row.plan }}</div></div>
+						<div class="table__cell" data-cell="Redtrack">{{ row.redtrack }}</div>
+						<div class="table__cell" data-cell='Voluum'>{{ row.voluum }}</div>
+					</div>
+					{% endfor %}
+				</div>
+				<img class="data__img data__img--tracking" src="img/img3.png" alt="img">
+			</div>
+			<div class="data__button data__button--max-w">
+				<a href="#" class="button">Start collecting the data!</a>
+			</div>
+		</div>
+	</section>
+	{% set dataTableToolkit = [{
+		plan: 'shared access',
+		redtrack: '+',
+		voluum: '+'
+	},
+	{
+		plan: 'white-label reporting portal',
+		redtrack: '+',
+		voluum: '-'
+	},
+	{
+		plan: 'affiliate tracking',
+		redtrack: '+',
+		voluum: '-'
+	},
+	{
+		plan: 'independent affiliate signup',
+		redtrack: '+',
+		voluum: '-'
+	}] %}
+
+	<section class="data data--toolkit">
+		<div class="l-center">
+			<div class="data__inner">
+				<img class="data__img data__img--toolkit" src="img/img4.png" alt="img">
+				<div class="data__tablewrap">
+					<div class="table">
+						<div class="table__row table__row--heading">
+							<div class="table__cell"><div class="table__max table__max--lg">Toolkit for agencies & businesses</div></div>
+							<div class="table__cell">Redtrack</div>
+							<div class="table__cell">Voluum</div>
+						</div>
+						{% for row in dataTableToolkit %}
+						<div class="table__row {% if loop.last %}table__row--last{% endif %}">
+							<div class="table__cell">{{ row.plan }}</div>
+							<div class="table__cell" data-cell="Redtrack">{{ row.redtrack }}</div>
+							<div class="table__cell" data-cell='Voluum'>{{ row.voluum }}</div>
+						</div>
+						{% endfor %}
+					</div>
+					<div class="data__button data__button--max-w data__button--absolute">
+						<a href="#" class="button">Yes, these statistics are great!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="heading heading--bg-white">
+		<div class="l-center">
+			<h2 class="heading__title">What people say?</h2>
 		</div>
 	</div>
 {% endblock %}
