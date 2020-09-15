@@ -1,128 +1,397 @@
 <!doctype html>
 <html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>redtrack</title>
-  <style>
-    *{margin:0;padding: 0;box-sizing: border-box}
-    :root{
-      --main-color: #afd702;
-    }
-    body {
-      color: #333;
-      margin: 0;
-      padding: 0 40px;
-      font-size: 20px;
-    }
-    section{
-      width: 300px;
-      padding: 30px 0;
-    }
-    .preview{
-      position: fixed;
-      right: 42px;
-      top: 120px;
-      left: 355px;
-      bottom: 120px;
-    }
-    iframe{
-      max-width: 100%;
-      opacity: 1;
-      box-shadow: 0 0 8px rgba(#000,.5);
-      margin: 0 auto;
-      transform-origin: 0 0;
-      box-shadow: 0 0 20px rgba(0,0,0,.6);
-    }
-    .pagelist{
-      list-style-type: none;
-      width: 275px;
-    }
-    .pagelist li{
-      margin-bottom: 5px;
-    }
-    .pagelist li:last-child{
-      margin-bottom: 0;
-    }
-    .pagelist__title{
-      color: #000;
-      text-decoration: none;
-      padding: 5px 8px 5px 3px;
-      position: relative;
-      left: -3px;
-    }
-    .pagelist__title:hover{
-      background: #000;
-      color: #fff;
-    }
-    .is-notready .pagelist__title{
-      color: #aaaaaa;
-      background: #fff;
-      pointer-events: none;
-    }
-    .pagelist__title span{
-      margin-right: 5px;
-    }
-    .pagelist__title em{
-      font-style: normal;
-      font-weight: normal;
-      position: relative;
-      display: inline-block;
-    }
-    .pagelist__url{
-      width: 24px;
-      height: 24px;
-      border-radius: 4px;
-      background: #f9e900;
-      background: var(--main-color);
-      display: inline-block;
-      position: relative;
-      vertical-align: middle;
-      margin-left: 4px;
-    }
-    .is-notready .pagelist__url{
-      background: #eeeeee;
-      pointer-events: none;
-    }
-    .pagelist__url .icon{
-      max-width: 100%;
-      fill: #000;
-      padding: 0 5px;
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-    }
-  </style>
-</head>
-<body>
-<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="icon-link" viewBox="0 0 20 10">
-    <path d="M1.9 5c0-1.71 1.39-3.1 3.1-3.1h4V0H5C2.24 0 0 2.24 0 5s2.24 5 5 5h4V8.1H5C3.29 8.1 1.9 6.71 1.9 5zM6 6h8V4H6v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V10h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" fill-rule="evenodd"/>
-  </symbol>
-</svg>
-<section>
-  <ol class="pagelist">
-    
-    
-    <li >
 
-    <a class="pagelist__title" target="_blank" href="home.html">
-      <span>1.</span>
-      <em>home</em>
-      <span class="pagelist__url">
-        <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
-      </span>
-    </a>
-    </li>
-    
+  <head>
+    <meta charset="utf-8" />
+    <title>Redtrack</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
 
-  </ol>
-</section>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <section class="intro">
+        <div class="intro__wrapper">
+          <div class="l-center">
+            <div class="intro__inner">
+              <div class="intro__info">
+                <a href="#" class="logo"><img src="img/logo.png" alt="redtrack"></a>
+                <p class="intro__note">Are you using Voluum?</p>
+                <div class="intro__desc">
+                  <h1 class="intro__header">Meet RedTrack</h1>
+                  <p class="intro__text">-the Voluum alternative for affiliates, media buyers, and agencies who want advanced ad tracker with all the features they might need, transparent pricing, and excellent support.</p>
+                </div>
+                <div class="intro__button">
+                  <a href="https://app.redtrack.io/signup" class="button">I want to start tracking now</a>
+                </div>
+              </div>
+              <img class="intro__img" src="img/img1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="heading">
+        <div class="l-center">
+          <h2 class="heading__title">How do our prices compare <br> with Voluum?</h2>
+        </div>
+      </div>
+      <section class="data data--main">
+        <div class="l-center">
+          <div class="data__inner">
+            <img class="data__img" src="img/img2.png" alt="img">
+            <div class="table">
+              <div class="table__row table__row--heading">
+                <div class="table__cell">
+                  <div class="table__max">Monthly Plans</div>
+                </div>
+                <div class="table__cell">Redtrack</div>
+                <div class="table__cell">Voluum</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max">monthly limits on active campaigns</div>
+                </div>
+                <div class="table__cell " data-cell="Redtrack">unlimited</div>
+                <div class="table__cell" data-cell='Voluum'>limited</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max">method of counting events</div>
+                </div>
+                <div class="table__cell " data-cell="Redtrack">clicks</div>
+                <div class="table__cell" data-cell='Voluum'>visits, clicks, conversions</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max">up to 1,000,000 events</div>
+                </div>
+                <div class="table__cell table__cell--bold" data-cell="Redtrack">$49/mo</div>
+                <div class="table__cell" data-cell='Voluum'>$69/mo</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max">up to 3,000,000 events</div>
+                </div>
+                <div class="table__cell table__cell--bold" data-cell="Redtrack">$99/mo</div>
+                <div class="table__cell" data-cell='Voluum'>$149/mo</div>
+              </div>
+              <div class="table__row table__row--last">
+                <div class="table__cell">
+                  <div class="table__max">up to 10,000,000 events</div>
+                </div>
+                <div class="table__cell table__cell--bold" data-cell="Redtrack">$399/mo</div>
+                <div class="table__cell" data-cell='Voluum'>$449/mo</div>
+              </div>
+              <hr class="table__divider">
+              <div class="table__row table__row--heading">
+                <div class="table__cell">
+                  <div class="table__max">Yearly Plans <br> <span>(No of events monthly)</span></div>
+                </div>
+                <div class="table__cell">Redtrack</div>
+                <div class="table__cell">Voluum</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max">up to 1,000,000 events</div>
+                </div>
+                <div class="table__cell table__cell--bold" data-cell="Redtrack">$490 per year</div>
+                <div class="table__cell" data-cell='Voluum'>$588 per year</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max">up to 3,000,000 events</div>
+                </div>
+                <div class="table__cell table__cell--bold" data-cell="Redtrack">$990 per year</div>
+                <div class="table__cell" data-cell='Voluum'>$1,428 per year</div>
+              </div>
+              <div class="table__row table__row--last">
+                <div class="table__cell">
+                  <div class="table__max">up to 10,000,000 events</div>
+                </div>
+                <div class="table__cell table__cell--bold" data-cell="Redtrack">$3,990 per year</div>
+                <div class="table__cell" data-cell='Voluum'>$4,188 per year</div>
+              </div>
+            </div>
+          </div>
+          <div class="data__button">
+            <a href="https://app.redtrack.io/signup" class="button">Start collecting the data!</a>
+          </div>
+        </div>
+      </section>
+      <div class="heading heading--bg-white heading--more-padding">
+        <div class="l-center">
+          <h2 class="heading__title">Let's compare our features <br> with Voluum?</h2>
+        </div>
+      </div>
+      <section class="data data--tracking">
+        <div class="l-center">
+          <div class="data__inner">
+            <div class="table">
+              <div class="table__row table__row--heading">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">Tracking & reporting features</div>
+                </div>
+                <div class="table__cell">Redtrack</div>
+                <div class="table__cell">Voluum</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">monthly limits on active campaigns</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">unlimited</div>
+                <div class="table__cell" data-cell='Voluum'>limited</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">redirectless tracking</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>+ (starts from $/month)</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">organic traffic tracking</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>+</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">rule-based traffic distribution</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>+*</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">auto-optimization</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+*</div>
+                <div class="table__cell" data-cell='Voluum'>+*</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">multi-step funnels</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>+*</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">LP protect</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>+*</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">postback protect</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>-</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">unique click tracking</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>-</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">customizable click attribution</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>-</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">conditional postbacks</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>-</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">multi-step funnels</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>-</div>
+              </div>
+              <div class="table__row ">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">click and conversion logs</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>+*</div>
+              </div>
+              <div class="table__row table__row--last">
+                <div class="table__cell">
+                  <div class="table__max table__max--lg">real-time statistics</div>
+                </div>
+                <div class="table__cell" data-cell="Redtrack">+</div>
+                <div class="table__cell" data-cell='Voluum'>+*</div>
+              </div>
+            </div>
+            <img class="data__img data__img--tracking" src="img/img3.png" alt="img">
+          </div>
+          <div class="data__button data__button--max-w">
+            <a href="https://app.redtrack.io/signup" class="button">Start free 14-day trial</a>
+          </div>
+        </div>
+      </section>
+      <section class="data data--toolkit">
+        <div class="l-center">
+          <div class="data__inner">
+            <img class="data__img data__img--toolkit" src="img/img4.png" alt="img">
+            <div class="data__tablewrap">
+              <div class="table">
+                <div class="table__row table__row--heading">
+                  <div class="table__cell">
+                    <div class="table__max table__max--lg">Toolkit for agencies & businesses</div>
+                  </div>
+                  <div class="table__cell">Redtrack</div>
+                  <div class="table__cell">Voluum</div>
+                </div>
+                <div class="table__row ">
+                  <div class="table__cell">shared access</div>
+                  <div class="table__cell" data-cell="Redtrack">+</div>
+                  <div class="table__cell" data-cell='Voluum'>+</div>
+                </div>
+                <div class="table__row ">
+                  <div class="table__cell">white-label reporting portal</div>
+                  <div class="table__cell" data-cell="Redtrack">+</div>
+                  <div class="table__cell" data-cell='Voluum'>-</div>
+                </div>
+                <div class="table__row ">
+                  <div class="table__cell">affiliate tracking</div>
+                  <div class="table__cell" data-cell="Redtrack">+</div>
+                  <div class="table__cell" data-cell='Voluum'>-</div>
+                </div>
+                <div class="table__row table__row--last">
+                  <div class="table__cell">independent affiliate signup</div>
+                  <div class="table__cell" data-cell="Redtrack">+</div>
+                  <div class="table__cell" data-cell='Voluum'>-</div>
+                </div>
+              </div>
+              <div class="data__button data__button--max-w data__button--absolute">
+                <a href="https://redtrack.io/request-demo/" class="button">Nice, can I schedule a demo?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="heading heading--bg-white">
+        <div class="l-center">
+          <h2 class="heading__title">What people say?</h2>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slider__bg"></div>
+        <div class="l-center">
+          <div class="slider__inner">
+            <div class="slider__nav"></div>
+            <div class="owl-carousel owl-theme">
+              <div class="slider__item">
+                <h3 class="slider__title">“Excellent company”</h3>
+                <hr class="slider__underline">
+                <div class="slider__text">
+                  <p>Excellent company. I'm particularly happy with Redtrack.io because they invest the time to make sure that their solution works well for you. I use a somewhat unusual method of advertising, but the team spent several hours of their precious time to make sure their solution was fit for purpose.</p>
+                  <p>Furthermore, the tracker does not seem to be plagued with difficulties that I have experienced with other trackers, namely a deluge of spam traffic that renders other tools functionally useless.</p>
+                  <p>Redtrack blocks these spam bots at source, meaning you can focus on what you want : advertising and making money!</p>
+                  <p>Highly recommended.</p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <h3 class="slider__title">“Good tracker. Good price.”</h3>
+                <hr class="slider__underline">
+                <div class="slider__text">
+                  <p>Functionality at the level of all cloud trackers.</p>
+                  <p>You have full API access, which is very good. Fast redirects. And all for the lowest price on the market.</p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <h3 class="slider__title">“Great ad tracker with amazing support”</h3>
+                <hr class="slider__underline">
+                <div class="slider__text">
+                  <p>RedTrack is a great pick for those who run Facebook, Google Ads, and Bing Ads campaigns because of a direct API integration that uploads conversions to these ad sources.</p>
+                  <p>I always suggest RedTrack to my clients when they need a complex funnel stitching solution for their web portals as well, i.e. have many inbound traffic sources and outbound offers — a setup that goes beyond the standard landing page with a list of offers.</p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <h3 class="slider__title">“Excellent service overall”</h3>
+                <hr class="slider__underline">
+                <div class="slider__text">
+                  <p>I only used RedTrack for a month, but I really enjoyed my experience. It's a great tracker for the price, does most of the things you would ever need, and if you need more you can always talk to the support which was kind enough to contact me by skype and continuously offer support with any issues I was facing.</p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <h3 class="slider__title">“Great tracking tool”</h3>
+                <hr class="slider__underline">
+                <div class="slider__text">
+                  <p>Great tracking tool. Well structured inside, has a variety of tools for testing and tracking. Team is very supportive and responsive. Personal approach (is the best approach). It feels that RedTrack team works to meet clients needs. You can really built long-term with them.</p>
+                  <p>Thanks Guys!</p>
+                </div>
+              </div>
+              <div class="slider__item">
+                <h3 class="slider__title">“Perfect tracker for affiliate marketing”</h3>
+                <hr class="slider__underline">
+                <div class="slider__text">
+                  <p>I have been using redtrack.io tracker for over an year and quite happy with it.</p>
+                  <p>The best thing i like about is ease of setup and use even for the beginners in affiliate marketing. It has all advance features which a good tracker should have. Their support team is good. I liked the way they add new features. I needed split campaign and their support team helped me to set it up.</p>
+                  <p>Recently they added integration with google analytics, which is really cool.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="l-center">
+          <div class="footer__inner">
+            <div class="footer__button">
+              <a href="https://redtrack.io/request-demo/" class="button">Get help with migration</a>
+            </div>
+            <h2 class="footer__title">Other solutions</h2>
+            <div class="footer__desc">
+              <p>Are you still investigating which performance marketing platform will answer all your needs?</p>
+              <p>We are working on similar pages for other solutions and will add URLs as those pages are ready.</p>
+            </div>
+            <div class="footer__solutions">
+              <ul class="footer__list">
+                <li class="footer__option">Bemob</li>
+                <li class="footer__option">ThriveTracker</li>
+                <li class="footer__option">ClickMeter</li>
+                <li class="footer__option">ClickMagic</li>
+                <li class="footer__option">AdsBridge</li>
+                <li class="footer__option">Peerclick</li>
+              </ul>
+            </div>
+            <div class="footer__button footer__button--last">
+              <a href="https://redtrack.io/request-demo/" class="button">Get help with migration</a>
+            </div>
+            <ul class="footer__copy">
+              <li class="footer__copy-option">2020 Redtrack Technologies Ltd.</li>
+              <li class="footer__copy-option"><a href="#" class="footer__link">Terms of Use</a></li>
+              <li class="footer__copy-option"><a href="#" class="footer__link">Privacy Policy</a></li>
+              <li class="footer__copy-option"><a href="#" class="footer__link">GDPR</a></li>
+              <li class="footer__copy-option"><a href="#" class="footer__link">Cookie Policy</a></li>
+            </ul>
+            <img src="img/img5.png" alt="img5" class="footer__img footer__img--left">
+            <img src="img/img6.png" alt="img6" class="footer__img footer__img--right">
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
 
-</body>
 </html>
-
-
-
